@@ -16,7 +16,7 @@ import java.util.List;
 public class SimpleMapValue {
     public static void main(String[] args) {
         SparkSession sparkSession = SparkSession.builder().appName("JavaWordCount").master("local").getOrCreate();
-        //spark对普通List的reduce操作
+        //spark对普通List的map操作
         JavaSparkContext javaSparkContext = new JavaSparkContext(sparkSession.sparkContext());
         List<Integer> data = Arrays.asList(1, 2, 3, 4, 5);
         JavaRDD<Integer> originRDD = javaSparkContext.parallelize(data);
